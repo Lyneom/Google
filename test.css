@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -12,9 +13,10 @@ ul {
   list-style: none;
 }
 
-
 #nav_bar {
   float: right;
+  font-size: 13px;
+  margin: 0;
 }
 
 #nav_bar li {
@@ -25,9 +27,14 @@ ul {
 #nav_bar #sign_in {
   background: #4887ef; 
   margin-right: 25px;
-  padding: 7px 15px;
+  padding: 7px 11px;
   border-radius: 3px; 
   font-weight: bold;
+}
+
+#nav_bar #capture {
+  position: relative;
+  top: 12px;
 }
 
 .nav-links {
@@ -51,16 +58,13 @@ li.nav-links a:hover {
   color: #fff;
 }
 
-/* GOOGLE AREA */
-.google {
+.google #google_logo {
   text-align: center;
   display: block;
   margin: 0 auto;
   clear: both;
   padding-top: 112px;
   padding-bottom: 20px;
-  justify-content: center;
-  align-items: center;
 }
 
 .form {
@@ -68,31 +72,29 @@ li.nav-links a:hover {
 }
 
 #form-search { 
-  width: 450px;
-  line-height: 32px;
+  border-style: solid;
+  border-color: #e4e4e4;
+  width: 550px;
+  line-height: 42px;
   padding: 20px 10px;
+  border-radius: 26px;
+  font-size: 16px;
 }
 
 .form #form-search {
   padding: 0 8px;
 }
 
-/*#form-search:hover {
+#form-search:hover {
   border-color: #e4e4e4;
   padding-top: 0;
-}*/
-
-.buttons {
-  text-align: center;
-  padding-top: 30px;
-  margin-bottom: 133px;
+  box-shadow: 1px 1px 5px #999;
 }
 
-/* FOOTER */
 footer  {
-  background: #e4e4e4;
+  background: #f2f2f2;
   border-top: solid 2px #e4e4e4;
-/*   position: fixed; */
+  position: fixed;
   bottom: 0;
   padding-bottom: 0;
   width: 100%;
@@ -102,7 +104,7 @@ footer  {
 footer ul li {
   display: inline;
   color: #666666;
-  font-size: 14px;
+  font-size: 13px;
   padding: 13px;
 }
 
@@ -119,8 +121,6 @@ footer ul a:hover {
   float: right;
 }
 
-/* MEDIA QUERIES */
-
 @media screen and (max-width: 400px) {
  
  li.nav-links a {
@@ -129,10 +129,6 @@ footer ul a:hover {
   
  #google_logo {
    padding: 0;
- }
-  
- .buttons {
-   display: none;
  }
   
  #form-search {
@@ -185,8 +181,6 @@ footer ul a:hover {
  }
   
  footer {
-/*    bottom: 0;
-   postion: absolute; */
    position:absolute;
    bottom:0;
    width:100%;
@@ -213,9 +207,41 @@ footer ul a:hover {
  }
 }
 
-
 .france
 {
-  margin-left: 15;
-  color: #666666;
+  display: flex;
+  flex-direction: column;
+  line-height: 45px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background-color: #f2f2f2;
+  display: inline;
+  color: rgba(0,0,0,0.54);
+  position:absolute;
+  height:60px;
+  width: 100%;
+  position:absolute;
+  bottom:50;
+}
+
+#buttonSearch button
+{
+	background-color: #f2f2f2;
+	color: #757575;
+	border: 1px;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 0 16px;
+	line-height: 27px
+	margin: 11px 4px;
+	height: 36px;
+	margin: 4px;
+}
+
+#buttonSearch button:hover
+{
+	border: 1px solid #c6c6c6;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	background-color: #f8f8f8;
+	color: #222;
+	margin: 3px;
 }
